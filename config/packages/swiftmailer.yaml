@@ -1,0 +1,7 @@
+swiftmailer:
+    encryption: ssl
+    auth_mode:  login
+    host:      smtp.gmail.com
+    username:  sandrine.duhamel@lapiscine.pro
+    password:  Sasou0305
+    transport: gmail

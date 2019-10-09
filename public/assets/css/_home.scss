@@ -1,0 +1,73 @@
+.parallax{
+  background-image: url("../photos/BG5.jpg");
+  height: 700px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar{
+  background-color: rgba(0,0,0,0.6);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  position:relative;
+  width: 100%;
+}
+.navbar a:hover{
+  color: red;
+  text-decoration: none;
+}
+.navbar a{
+  color:white;
+}
+.imgFluid{
+  width: 100%;
+  position: absolute;
+}
+.foot{
+  background-color: rgba(0,0,0,0.6);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  width: 100%;
+}
+#reseaux_facebook{
+  width: 40%;
+  margin: 10px;
+  position: relative;
+}
+#reseaux_insta{
+  width: 40%;
+  margin: 10px;
+  position: relative;
+}
+#contact{
+  width: 40%;
+  margin: 10px;
+  position: relative;
+}
+section{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: black;
+}
+.section1{
+  display: flex;
+  width: 60%;
+  align-items: center;
+}
+.article1{
+  margin-left: 10%;
+  text-align: justify;
+  color: white;
+  background-color: rgba(0,0,0,0.6);
+}
+.chapillon img{
+  width: 120%;
+  margin: 10%;
+  position: relative;
+}

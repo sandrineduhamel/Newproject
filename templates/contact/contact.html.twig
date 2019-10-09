@@ -1,0 +1,50 @@
+
+{% extends 'index/index.html.twig' %}
+
+{% block header %}
+
+
+{% endblock %}
+
+
+{% block main %}
+
+    <h1 class="titre-formulaires">Me Contacter</h1>
+
+    <div class="formulaire">
+
+        <div class="formulaire2">
+
+            {{ form_start(ContactForm, {'attr': {'class': 'form'}}) }}
+
+
+            {{ form_label(ContactForm.nom, 'Nom', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(ContactForm.nom, {'attr': {'class': 'form-input form-input-content'}}) }}
+
+            {{ form_label(ContactForm.prenom, 'Prenom', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(ContactForm.prenom, {'attr': {'class': 'form-input form-input-content'}}) }}
+
+            {{ form_label(ContactForm.email, 'Email', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(ContactForm.email, {'attr': {'class': 'form-input form-input-content', 'type': 'email'}}) }}
+
+            {{ form_label(ContactForm.message, 'Message', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(ContactForm.message, {'attr': {'class': 'form-textarea'}}) }}
+
+            <div>
+                <button class="form-submit" type="submit">Envoyer</button>
+            </div>
+            <div>
+                {% for messages in app.flashes %}
+                    {%  for message in messages  %}
+                        {{ message }}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+
+            {{ form_end(ContactForm) }}
+
+        </div>
+
+    </div>
+
+{% endblock %}

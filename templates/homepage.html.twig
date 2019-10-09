@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta aria-roledescription="Maï'Tattoo tattoo shop seignosse">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    {#Carrousel#}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    {#Carroussel#}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/path/to/parallax.js"></script>
+    <link rel="stylesheet" href="{{ asset ('assets/css/main.css') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ asset ('assets/photos/chapillon.png')  }}"/>
+    <title>MaiTattoo</title>
+
+
+</head>
+<body>
+<header>
+
+    <div class="navbar">
+        <div><a href="">Home</a></div>
+        <div><a href="">galerie</a></div>
+        <div><a href="">Actualités</a></div>
+        <div><a href="">Salon</a></div>
+        <div><a href="">Maï'Tattoo</a></div>
+    </div>
+</header>
+
+<main>
+    <div class="parallax">
+    </div>
+    <section>
+        <div class="section1">
+            <div class="chapillon">
+                <img class="imgFluid" src="{{ asset('assets/photos/chapillon.png') }}" alt="">
+            </div>
+
+            <div class="article1">
+                <h1 class="titre-article1">Tattoo Shop Seignosse</h1>
+                Après avoir fait plusieurs shops en tant que Guest, c’est à Seignosse que Maïlys alias Maï’Tattoo a décidé de poser ses valises.
+                Une aventure qui a commencé en septembre 2018 et qui n’est pas prête de s’arrêter.
+                Grâce au bouche à oreille et aux jolis commentaires laissés par ses chers clients, la demande au magasin ne fait que s'accroître :-D, c'est pour cela qu'elle travaille actuellement en binôme avec Ludivine alias LUCIENNE.TATTOO !
+                C'est avec grand plaisir qu'elles vous accueilleront au shop donc n'hésitez pas à leur envoyer un message pour toutes demandes d'informations ou prises de RDV.
+                À très bientôt
+                Maï'Tattoo
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+    </section>
+</main>
+<footer>
+    <div class="foot">
+        <a href="https://www.facebook.com/mai.tatoueuse/" target="_blank" >
+            <img class="imgFluid" id="reseaux_facebook" src="{{ asset ('assets/photos/Facebook_sasou.png') }}" alt="">
+        </a>
+        <a href="https://www.instagram.com/mailystattoo/?hl=fr" target="_blank">
+            <img class="imgFluid" id="reseaux_insta" src="{{ asset ('assets/photos/insta_sasou.png') }}" alt="">
+        </a>
+        <a href="{{ path('contact') }}">
+            <img id="contact" src="{{ asset ('assets/photos/mail_sasou.png') }}" alt="">
+        </a>
+    </div>
+</footer>
+<script type="text/javascript" src="{{ asset ('assets/js/script.js') }}"></script>
+</body>
+</html>
