@@ -19,6 +19,18 @@ class GaleryRepository extends ServiceEntityRepository
         parent::__construct($registry, Galery::class);
     }
 
+    public function findImages()
+    {
+        return $this->createQueryBuilder('g')
+                    ->select('g')
+                    ->leftJoin('g.images', 'i')
+                    ->addSelect('i')
+                    ->getQuery()
+                    ->getResult();
+    }
+
+
+
     // /**
     //  * @return Galery[] Returns an array of Galery objects
     //  */

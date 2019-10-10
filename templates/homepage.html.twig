@@ -54,7 +54,12 @@
     </section>
 
     <section>
-
+            {% for element in galery  %}
+                {{ element.name }}
+                {% for element2 in element.images %}
+                    <img src="{{ asset('photo') }}/{{ element2.name }}" alt="">
+                {% endfor %}
+            {% endfor %}
     </section>
 </main>
 <footer>

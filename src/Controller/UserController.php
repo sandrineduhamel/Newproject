@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Entity\Contact;
 use App\Form\ContactType;
+use App\Repository\GaleryRepository;
+use App\Repository\ImagesRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,10 +17,15 @@ class UserController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function home()
+    public function home(GaleryRepository $galeryRepository, ImagesRepository $imagesRepository)
     {
+        $galery = $galeryRepository->findImages();
+        $images = $imagesRepository->findAll();
+
         return $this->render('homepage.html.twig', [
-            'controller_name' => 'UserController',
+
+            'galery'=> $galery,
+            'images'=> $images
         ]);
     }
     

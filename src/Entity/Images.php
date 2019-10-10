@@ -24,14 +24,15 @@ class Images
     private $name;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Galery", mappedBy="images")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Galery", inversedBy="images")
      */
-    private $galeries;
+    private $galery;
 
     public function __construct()
     {
-        $this->galeries = new ArrayCollection();
+        $this->galery = new ArrayCollection();
     }
+
 
     public function getId(): ?int
     {
@@ -53,16 +54,15 @@ class Images
     /**
      * @return Collection|Galery[]
      */
-    public function getGaleries(): Collection
+    public function getGalery(): Collection
     {
-        return $this->galeries;
+        return $this->galery;
     }
 
     public function addGalery(Galery $galery): self
     {
-        if (!$this->galeries->contains($galery)) {
-            $this->galeries[] = $galery;
-            $galery->addImage($this);
+        if (!$this->galery->contains($galery)) {
+            $this->galery[] = $galery;
         }
 
         return $this;
@@ -70,11 +70,12 @@ class Images
 
     public function removeGalery(Galery $galery): self
     {
-        if ($this->galeries->contains($galery)) {
-            $this->galeries->removeElement($galery);
-            $galery->removeImage($this);
+        if ($this->galery->contains($galery)) {
+            $this->galery->removeElement($galery);
         }
 
         return $this;
     }
+
+
 }

@@ -24,7 +24,7 @@ class Galery
     private $name;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Images", inversedBy="galeries")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Images", mappedBy="galery", cascade={"remove"})
      */
     private $images;
 
@@ -32,6 +32,10 @@ class Galery
     {
         $this->images = new ArrayCollection();
     }
+
+
+
+
 
     public function getId(): ?int
     {
@@ -62,6 +66,7 @@ class Galery
     {
         if (!$this->images->contains($image)) {
             $this->images[] = $image;
+            $image->addGalery($this);
         }
 
         return $this;
@@ -71,8 +76,11 @@ class Galery
     {
         if ($this->images->contains($image)) {
             $this->images->removeElement($image);
+            $image->removeGalery($this);
         }
 
         return $this;
     }
+
+
 }
