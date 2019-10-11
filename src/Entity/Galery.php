@@ -35,8 +35,6 @@ class Galery
 
 
 
-
-
     public function getId(): ?int
     {
         return $this->id;

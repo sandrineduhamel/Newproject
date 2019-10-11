@@ -1,1 +1,17 @@
-{{ form(galeryForm) }}
+
+<div class="formulairegalery">
+
+    {{ form_start(galeryForm, {'attr': {'class': 'form'}}) }}
+
+
+    {{ form_label(galeryForm.name, 'nom', {'label_attr': {'class': 'form-label'}}) }}
+    {{ form_widget(galeryForm.name, {'attr': {'class': 'form-input form-input-content'}}) }}
+
+
+    {{ form_label(galeryForm.images, 'images', {'label_attr': {'class': 'form-label'}}) }}
+    {{ form_widget(galeryForm.images, {'attr': {'class': 'form-input form-input-content'}}) }}
+
+
+    {{ form_end(galeryForm) }}
+
+</div>

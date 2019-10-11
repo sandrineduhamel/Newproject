@@ -71,3 +71,55 @@ section{
   margin: 10%;
   position: relative;
 }
+.tgalery{
+  text-align: center;
+  margin-top: 3%;
+  color:white;
+  background-color: rgba(0,0,0,0.6);
+  padding: 20px;
+}
+.imgcarroussel{
+    width:250px;
+    height:200px;
+    border-radius: 10px;
+}
+.titre{
+    border-radius: 10px 100px / 120px;
+    background-color: black;
+    color:red;
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    text-transform: capitalize;
+}
+.theme{
+  padding-top: 5%;
+  margin: 0 auto;
+  width: 40%;
+  text-align: center;
+  color: black;
+}
+.galery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: 10px;
+  padding: 5%;
+}
+
+.slideshow {
+  width:250px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.slideshow ul {
+  width: 400%;
+  height: 200px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.slideshow li{
+  float: left;
+}

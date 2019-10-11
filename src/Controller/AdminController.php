@@ -41,7 +41,7 @@ class AdminController extends AbstractController
 
             /** @var UploadedFile $imageFile */
             /*-Image correspond au champ de mon formulaire*/
-            $imageFile = $form['name']->getData();
+            $imageFile = $form['images']->getData();
 
             // Condition nécessaire car le champ 'image' n'est pas requis
             // donc le fichier doit être traité que s'il est téléchargé
@@ -124,33 +124,7 @@ class AdminController extends AbstractController
         ]);
 
     }
-    /*------insert images Form----------*/
 
-    /**
-     * @Route("admin/newImages", name="new_images")
-     */
-    public function insert(Request $request, EntityManagerInterface $entityManager){
-
-        $images = new Images();
-
-        $form = $this->createForm(ImagesType::class, $images);
-
-        if($request->isMethod('POST')){
-            $form->handleRequest($request);
-            if ($form->isSubmitted() && $form->isValid()) {
-
-                $entityManager->persist($images);
-                $entityManager->flush();
-
-                return $this->redirectToRoute('home');
-            }
-        }
-        return $this->render('admin/admin_images.html.twig',[
-
-            'imagesForm' => $form->createView(),
-        ]);
-
-    }
 
     /*--------suppression de l'image---------*/
 

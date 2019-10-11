@@ -24,7 +24,8 @@ class ImagesType extends AbstractType
                 "multiple" => true,
                 "mapped" => false
             ])
-            ->add('name', FileType::class,[
+            ->add('name')
+            ->add('images', FileType::class,[
                 'label' => 'Images',
 
                 'mapped' => false,

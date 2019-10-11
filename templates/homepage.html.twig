@@ -54,12 +54,29 @@
     </section>
 
     <section>
+        <div class="tgalery">
+            <h1>Galery</h1>
+        </div>
+        <div class="galery">
+
             {% for element in galery  %}
-                {{ element.name }}
-                {% for element2 in element.images %}
-                    <img src="{{ asset('photo') }}/{{ element2.name }}" alt="">
-                {% endfor %}
+                <div class="theme">
+                    <h1 class="titre">{{ element.name }}</h1>
+
+                    <div class="slideshow">
+                        <ul>
+                            {% for element2 in element.images %}
+                                <li>
+                                    <img class="imgcarroussel" src="{{ asset('photo') }}/{{ element2.name }}" alt="">
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                </div>
             {% endfor %}
+
+        </div>
     </section>
 </main>
 <footer>
