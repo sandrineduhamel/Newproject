@@ -71,13 +71,25 @@ section{
   margin: 10%;
   position: relative;
 }
-.tgalery{
+.entre{
+  background-image: url("../photos/maitattoo.jpg");
+  height: 700px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gal{
+  display: flex;
+  width: 100%;
   text-align: center;
   margin-top: 3%;
-  color:white;
+  color:red;
   background-color: rgba(0,0,0,0.6);
   padding: 20px;
 }
+
 .imgcarroussel{
     width:250px;
     height:200px;
@@ -103,13 +115,13 @@ section{
   flex-wrap: wrap;
   justify-content: center;
   margin-right: 10px;
-  padding: 5%;
 }
 
 .slideshow {
   width:250px;
   height: 200px;
   overflow: hidden;
+  margin-bottom: 10%;
 }
 
 .slideshow ul {
@@ -122,4 +134,62 @@ section{
 
 .slideshow li{
   float: left;
+}
+
+.salon{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.imgs{
+  background-image: url("../photos/salon.jpg");
+  height: 700px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.salon{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.infoSalon{
+  width: 45%;
+  height: auto;
+  text-align: justify;
+  margin-right: 50px;
+  background-color: rgba(0,0,0,0.6);
+  color:white;
+  padding: 30px;
+}
+
+.titre-salon{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: white;
+}
+.map-seignosse{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.horaires {
+  width: 45%;
+  padding: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
 }
